@@ -6,7 +6,7 @@ A 3D obstacle-course party race in the style of **Fall Guys**, written in plain 
 
 🤖 Built with **Claude Code** using **Claude Opus 5.5** (reasoning effort: **high**).
 
-▶️ **Play online:** https://claude.ai/artifact/CDUjFkpVJEqNV5n8Ti5xNq (private link; the owner can share it from the page's Share menu)
+▶️ **Play online:** ([Bean Rush 3D](https://testgameclaude.vercel.app/))
 
 📊 **Project report** (prompt, process, testing, cost): [REPORT.md](REPORT.md) · [Bản tiếng Việt](REPORT.vi.md)
 
