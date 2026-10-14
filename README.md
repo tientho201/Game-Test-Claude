@@ -4,6 +4,8 @@
 
 A 3D obstacle-course party race in the style of **Fall Guys**, written in plain HTML + CSS + JavaScript with **Three.js**. It runs straight in the browser: no build step, no server.
 
+🤖 Built with **Claude Code** using **Claude Opus 5.5** (reasoning effort: **high**).
+
 ▶️ **Play online:** https://claude.ai/artifact/CDUjFkpVJEqNV5n8Ti5xNq (private link; the owner can share it from the page's Share menu)
 
 📊 **Project report** (prompt, process, testing, cost): [REPORT.md](REPORT.md) · [Bản tiếng Việt](REPORT.vi.md)

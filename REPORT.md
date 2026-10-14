@@ -2,12 +2,13 @@
 
 **English** · [Tiếng Việt](REPORT.vi.md) · Back to [README](README.md)
 
-This report covers what was asked, how it was built, how it was tested, and what it cost. The whole project was built by Claude Code in one cloud session on **2026-10-14**.
+This report covers what was asked, how it was built, how it was tested, and what it cost. The whole project was built by **Claude Code using Claude Opus 5.5 with high reasoning effort**, in one cloud session on **2026-10-14**.
 
 ## 1. Summary
 
 | Item | Result |
 |---|---|
+| Built with | Claude Code · **Claude Opus 5.5** · reasoning effort **high** |
 | Deliverable | A playable Fall Guys-style 3D obstacle race in the browser |
 | Tech | HTML + CSS + vanilla JavaScript + Three.js r128 (no build step) |
 | Setup | One step: open `index.html` in a browser (works offline) |
@@ -111,6 +112,7 @@ These numbers come from the cloud session's own usage meter (`get_session`). The
 
 | Metric | Value |
 |---|---|
+| Model | Claude Opus 5.5 (effort: high) |
 | **Cost (USD)** | **$5.68** |
 | Output tokens (code, text, tool calls) | 149,749 |
 | Cache read tokens | 4,795,555 |

@@ -2,12 +2,13 @@
 
 [English](REPORT.md) · **Tiếng Việt** · Quay lại [README](README.vi.md)
 
-Báo cáo này trình bày yêu cầu ban đầu, cách xây dựng, cách kiểm thử và chi phí. Toàn bộ dự án do Claude Code thực hiện trong một phiên làm việc trên cloud ngày **14/10/2026**.
+Báo cáo này trình bày yêu cầu ban đầu, cách xây dựng, cách kiểm thử và chi phí. Toàn bộ dự án được tạo bằng **Claude Code, sử dụng mô hình Claude Opus 5.5 ở mức suy luận (effort) high**, trong một phiên làm việc trên cloud ngày **14/10/2026**.
 
 ## 1. Tóm tắt
 
 | Hạng mục | Kết quả |
 |---|---|
+| Công cụ tạo | Claude Code · **Claude Opus 5.5** · mức suy luận **high** |
 | Sản phẩm | Game đua vượt chướng ngại vật 3D phong cách Fall Guys, chơi được trên trình duyệt |
 | Công nghệ | HTML + CSS + JavaScript thuần + Three.js r128 (không cần build) |
 | Cài đặt | 1 bước: mở `index.html` bằng trình duyệt (chạy được cả khi offline) |
@@ -113,6 +114,7 @@ Số liệu lấy từ đồng hồ đo của chính phiên làm việc trên cl
 
 | Chỉ số | Giá trị |
 |---|---|
+| Mô hình | Claude Opus 5.5 (effort: high) |
 | **Chi phí (USD)** | **5,68 USD** |
 | Token đầu ra (code, văn bản, lệnh công cụ) | 149.749 |
 | Token đọc từ cache | 4.795.555 |
