@@ -4,7 +4,9 @@
 
 Game đua vượt chướng ngại vật 3D phong cách **Fall Guys**, viết bằng HTML + CSS + JavaScript thuần và **Three.js**. Chạy trực tiếp trên trình duyệt, không cần build, không cần server.
 
-▶️ **Chơi online:** https://claude.ai/artifact/CDUjFkpVJEqNV5n8Ti5xNq (link riêng tư; chủ sở hữu có thể chia sẻ qua menu Share trên trang)
+🤖 Được tạo bằng **Claude Code** sử dụng **Claude Opus 5.5** (mức suy luận: **high**).
+
+▶️ **Chơi online:** ([Bean Rush 3D](https://testgameclaude.vercel.app/))
 
 📊 **Báo cáo dự án** (prompt, quy trình, kiểm thử, chi phí): [REPORT.vi.md](REPORT.vi.md) · [English](REPORT.md)
 
