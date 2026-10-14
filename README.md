@@ -1,51 +1,63 @@
 # 🫘 Bean Rush 3D
 
-Game đua vượt chướng ngại vật 3D phong cách **Fall Guys**, viết bằng HTML + CSS + JavaScript thuần và **Three.js**. Chạy trực tiếp trên trình duyệt, không cần build, không cần server.
+**English** · [Tiếng Việt](README.vi.md)
 
-## ▶️ Cài đặt trong 1 bước
+A 3D obstacle-course party race in the style of **Fall Guys**, written in plain HTML + CSS + JavaScript with **Three.js**. It runs straight in the browser: no build step, no server.
 
-**Mở file `index.html` bằng trình duyệt** (nhấp đúp vào file). Vậy là chơi được!
+▶️ **Play online:** https://claude.ai/artifact/CDUjFkpVJEqNV5n8Ti5xNq (private link; the owner can share it from the page's Share menu)
 
-> Three.js đã được đóng gói sẵn trong `vendor/three.min.js`, nên game chạy được cả khi **không có mạng**. Nếu thiếu file đó, game sẽ tự tải Three.js từ CDN.
-> Muốn chạy qua server (không bắt buộc): `npx http-server .` rồi mở `http://localhost:8080`.
+📊 **Project report** (prompt, process, testing, cost): [REPORT.md](REPORT.md) · [Bản tiếng Việt](REPORT.vi.md)
 
-## 🎮 Điều khiển
+## ▶️ One-step setup
 
-| Phím | Hành động |
+**Open `index.html` in a browser** (double-click the file). That's it.
+
+> Three.js ships in `vendor/three.min.js`, so the game also works **offline**. If that file is missing, the game loads Three.js from a CDN instead.
+> Optional, if you prefer a local server: `npx http-server .`, then open `http://localhost:8080`.
+
+## 🎮 Controls
+
+| Key | Action |
 |---|---|
-| `W A S D` / phím mũi tên | Di chuyển (theo hướng camera) |
-| `Space` | Nhảy (có bộ đệm nhảy và "coyote time") |
-| `Shift` / `E` | Lao người về phía trước |
-| Chuột | Bấm vào màn hình để khoá chuột, rê để xoay camera |
-| `Esc` / `P` | Tạm dừng |
-| Điện thoại | Joystick ảo + nút **NHẢY** / **LAO**, vuốt màn hình để xoay camera |
+| `W A S D` / arrow keys | Move (relative to the camera) |
+| `Space` | Jump (with jump buffering and coyote time) |
+| `Shift` / `E` | Dive forward |
+| Mouse | Click the screen to lock the pointer, then move to orbit the camera |
+| `Esc` / `P` | Pause |
+| Phone | Virtual joystick + **NHẢY** (jump) / **LAO** (dive) buttons; swipe to orbit the camera |
 
-## 🏁 Luật chơi
+## 🏁 Rules
 
-12 hạt đậu (bạn + 11 bot AI) cùng đua. **Chỉ 8 người về đích đầu tiên được đi tiếp**, và có giới hạn 3 phút. Rơi xuống biển chất nhờn hồng thì bạn hồi sinh ở cột mốc gần nhất.
+12 beans race: you plus 11 AI bots. **Only the first 8 across the line qualify**, and there is a 3-minute limit. Fall into the pink slime and you respawn at the last checkpoint.
 
-Đường đua gồm 7 chặng:
+The course has 7 sections:
 
-1. **Cối xay gió**: thanh quét xoay ở tầm thấp, phải nhảy qua.
-2. **Bậc thang lơ lửng**: bệ trượt ngang trên biển chất nhờn.
-3. **Cửa bí ẩn**: mỗi bức tường có 5 cửa, chỉ 2 cửa vỡ được (ngẫu nhiên mỗi trận).
-4. **Gạch rơi**: 136 viên gạch lục giác rung rồi sụp sau khi bị giẫm, hồi lại sau 6 giây.
-5. **Búa tạ**: cầu hẹp với 4 búa con lắc đánh văng người chơi.
-6. **Đĩa xoay**: 3 đĩa quay kèm thanh chắn, nhân vật bị cuốn theo chiều quay.
-7. **Dốc bóng lăn**: leo dốc, né bóng khổng lồ, rồi lao qua cổng đích.
+1. **Windmills**: low spinning sweeper bars you have to jump.
+2. **Floating steps**: platforms sliding sideways over the slime.
+3. **Mystery doors**: 5 doors per wall, only 2 break open (randomized every round).
+4. **Falling tiles**: 136 hexagonal tiles that shake and drop after you step on them, then come back after 6 seconds.
+5. **Hammers**: a narrow bridge with 4 swinging pendulum hammers.
+6. **Spinning discs**: 3 rotating discs with sweeping bars; you get carried by the rotation.
+7. **Ball ramp**: climb the slope, dodge giant rolling balls, and dive through the finish gate.
 
-## ✨ Tính năng
+## ✨ Features
 
-- **Vật lý tự viết**: va chạm capsule với hộp xoay (OBB), trụ và cầu; nhân vật đứng trên bệ động (trượt, xoay) sẽ di chuyển theo bệ; bị đánh văng dựa trên vận tốc điểm tiếp xúc; các hạt đậu va chạm và đẩy nhau; mô phỏng chia bước con 120 Hz nên chạy mượt trên mọi tần số màn hình.
-- **Bot AI**: đi theo waypoint, tự nhảy qua hố và thanh quét, chờ bệ trượt tới mới nhảy, canh nhịp búa, né bóng, nhớ cửa giả và ưu tiên cửa đã bị phá.
-- **Hiệu ứng**: hạt đậu co giãn (squash & stretch), tay chân chuyển động theo trạng thái, pháo giấy, bụi, bắn chất nhờn, cửa vỡ bay, biển chất nhờn và bầu trời dựng bằng shader, camera bay giới thiệu màn chơi, camera tự kéo lại gần khi bị tường che.
-- **Giao diện đầy đủ**: menu tuỳ chỉnh nhân vật (tên, 10 màu, 5 phụ kiện), bảng hướng dẫn, đếm ngược, HUD (đồng hồ, thanh tiến độ với vị trí từng người, thứ hạng, số người đã về đích), thông báo từng chặng, menu tạm dừng, bảng kết quả, lưu kỷ lục.
-- **Âm thanh tổng hợp bằng Web Audio**: hiệu ứng và nhạc nền tự sinh, không cần file âm thanh.
-- **Cài đặt**: độ nhạy chuột, đảo trục, chất lượng đồ hoạ, đổ bóng, âm lượng, nhạc nền, hiện FPS. Cài đặt được lưu lại trên trình duyệt.
+- **Hand-written physics**: capsule collisions against oriented boxes (OBB), cylinders and spheres. Characters standing on moving or rotating platforms are carried along. Knockback uses the velocity of the contact point. Beans bump and push each other. The simulation runs in 120 Hz sub-steps, so it is smooth at any display refresh rate.
+- **AI bots**: follow waypoints, jump gaps and sweeper bars, wait for sliding platforms to line up, time the hammers, dodge balls, remember fake doors and prefer doors that are already broken.
+- **Effects**: squash & stretch, state-driven limb animation, confetti, dust, slime splashes, flying door debris, shader-based slime sea and sky, a course fly-over intro, and a camera that pulls in when a wall blocks the view.
+- **Complete UI**: character customization (name, 10 colors, 5 accessories), how-to-play panel, countdown, HUD (timer, progress bar with every racer's position, rank, qualified count), section announcements, pause menu, results screen, personal best.
+- **Synthesized Web Audio sound**: effects and background music generated in code, no audio files.
+- **Settings**: mouse sensitivity, invert Y, graphics quality, shadows, volume, music, FPS counter. Saved in the browser.
 
-## 📁 Cấu trúc
+> The in-game interface is in Vietnamese.
+
+## 📁 Structure
 
 ```
-index.html          ← toàn bộ game (HTML + CSS + JS)
-vendor/three.min.js ← Three.js r128 (MIT), giúp chạy offline
+index.html          ← the whole game (HTML + CSS + JS)
+vendor/three.min.js ← Three.js r128 (MIT), for offline play
+README.md           ← this file (English)
+README.vi.md        ← Vietnamese README
+REPORT.md           ← project report (English)
+REPORT.vi.md        ← project report (Vietnamese)
 ```
